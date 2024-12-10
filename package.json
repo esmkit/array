@@ -1,6 +1,6 @@
 {
   "name": "@esmkit/array",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "license": "MIT",
   "description": "a collection of immutable `Array.prototype` methods.",
   "author": "Billgo <hi@billgo.me>",
@@ -30,9 +30,7 @@
     "build:esm": "bunx tsup",
     "start": "bun run --watch examples/index.ts"
   },
-  "dependencies": {
-    "@esmkit/math": "^0.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@devjskit/biome-config": "^0.1.14",

@@ -1,4 +1,19 @@
-import { randomInt } from "@esmkit/math";
+function random(minimum: number, maximum?: number): number {
+  if (maximum == null) {
+    maximum = minimum;
+    minimum = 0;
+  }
+
+  if (minimum >= maximum) {
+    throw new Error("Invalid input: The maximum value must be greater than the minimum value.");
+  }
+
+  return Math.random() * (maximum - minimum) + minimum;
+}
+
+function randomInt(minimum: number, maximum?: number): number {
+  return Math.floor(random(minimum, maximum!));
+}
 
 /**
  * Returns a sample element array of a specified `size`.
