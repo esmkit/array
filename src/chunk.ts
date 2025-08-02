@@ -23,7 +23,7 @@
  */
 export function chunk<T>(arr: readonly T[], size: number): T[][] {
   if (!Number.isInteger(size) || size <= 0) {
-    throw new Error('Size must be an integer greater than zero.');
+    throw new Error("Size must be an integer greater than zero.");
   }
 
   const chunkLength = Math.ceil(arr.length / size);

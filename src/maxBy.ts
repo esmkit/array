@@ -62,7 +62,7 @@ export function maxBy<T>(items: readonly T[], getValue: (element: T) => number):
  */
 export function maxBy<T>(items: readonly T[], getValue: (element: T) => number): T {
   let maxElement = items[0];
-  let max = -Infinity;
+  let max = Number.NEGATIVE_INFINITY;
 
   for (let i = 0; i < items.length; i++) {
     const element = items[i];

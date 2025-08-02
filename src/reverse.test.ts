@@ -19,21 +19,14 @@ describe("reverse", () => {
   });
 
   it("should reverse about same value", () => {
-    const a = {},
-      b = {};
+    const a = {};
+    const b = {};
     assert.deepStrictEqual(reverse([a, b]), [b, a]);
   });
 
   it("should reverse order the array.", () => {
     assert.deepStrictEqual(reverse(["a", "b", "c", "d", "e"]), ["e", "d", "c", "b", "a"]);
     assert.deepStrictEqual(reverse([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
-    assert.deepStrictEqual(reverse([true, Number.POSITIVE_INFINITY, undefined, undefined, "NaN", "-1"]), [
-      "-1",
-      "NaN",
-      undefined,
-      undefined,
-      Number.POSITIVE_INFINITY,
-      true,
-    ]);
+    assert.deepStrictEqual(reverse([true, Number.POSITIVE_INFINITY, undefined, undefined, "NaN", "-1"]), ["-1", "NaN", undefined, undefined, Number.POSITIVE_INFINITY, true]);
   });
 });

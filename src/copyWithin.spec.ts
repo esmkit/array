@@ -30,7 +30,7 @@ describe("copyWithin", () => {
   it("should copyWithin to Array-like", () => {
     const arrayLike = { length: 5, 3: 1 };
     const actual = copyWithin(arrayLike as any, 0, 3);
-    // biome-ignore lint/suspicious/noSparseArray: <explanation>
+    // biome-ignore lint/suspicious/noSparseArray: intentional sparse array
     assert.deepStrictEqual(actual, [1, , , 1, ,]);
   });
 });

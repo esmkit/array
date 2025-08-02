@@ -26,7 +26,6 @@
  */
 
 export function castArray<T>(value?: T | readonly T[]): T[] {
-  // biome-ignore lint/style/noArguments: <explanation>
   if (arguments.length === 0) {
     return [];
   }

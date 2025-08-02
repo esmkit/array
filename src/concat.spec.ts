@@ -19,7 +19,7 @@ describe("concat", () => {
   });
 
   it("should cast non-array `array` values to arrays", () => {
-    // biome-ignore lint/suspicious/noSparseArray: <explanation>
+    // biome-ignore lint/suspicious/noSparseArray: intentional sparse array for test
     const values = [, null, undefined, false, true, 1, Number.NaN, "a"];
 
     let expected: unknown[] = values.map((value, index) => (index ? [value] : []));

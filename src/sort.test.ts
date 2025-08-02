@@ -43,7 +43,7 @@ describe("sort", () => {
 
     it("sorts string array (with compareFunction) (descending)", () => {
       const stringArray = ["Blue", "Humpback", "Beluga"];
-      const resultArray = sort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
+      const resultArray = sort(stringArray, (a: string, b: string) => (a.toLowerCase() < b.toLowerCase() ? 1 : -1));
       assert.deepStrictEqual(resultArray, ["Humpback", "Blue", "Beluga"]);
     });
   });
